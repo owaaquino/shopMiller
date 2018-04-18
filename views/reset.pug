@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    #login-form.wrapper_desktop
+        h1.title-header Reset your Password
+        form(method='POST')
+            label(for='password') New Password
+            input(type='password', name='password')
+            label(for='confirm-password') Confirm Password
+            input(type='password', name='confirm-password')
+            input(type='submit', value='Reset Password')

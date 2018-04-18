@@ -1,0 +1,31 @@
+extends layout
+
+block content
+	div
+	h1.title-header Contact Us
+	#contact_info_card.wrapper_desktop
+		.card_contact
+			h3 Phone
+			p (+63) 989 - 954 - 2381
+		.card_contact
+			h3 Email
+			p
+				a(href='mailto:perez.miller@gmail.com') perez.miller@gmail.com
+		.card_contact
+			h3 Location
+			p
+				| 123 Somewhere, 
+				br
+				| Out There, Manila
+	#contact_info_form.wrapper_desktop
+		div
+			form(action='')
+				label(for='name') Name
+				input(type='text', name='name')
+				label(for='email') Email
+				input(type='email', name='email')
+				label(for='message') Message
+				textarea(name='message')
+				input(type='submit', name='sendBtn', value='Send')
+		div
+			img(src='img/sample/about_sample_img.jpg')

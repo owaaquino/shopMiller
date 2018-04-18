@@ -1,0 +1,32 @@
+mixin shopForm(shop = {})
+    form( action=`/new-shop/${shop._id || ''}` method='POST' enctype='multipart/form-data')
+        label(for='shopname') Shop Name
+        input(type='text', name='shopname', required value=shop.shopname)
+        //- address, long and lat
+        label(for='address') Location
+        input(type='text', id='address', name='location[address]', value=(shop.location && shop.location.address))
+        label(for='lng') Long
+        input(type='number', id='lng', name='location[coordinates][0]' value=(shop.location && shop.location.coordinates[0]) required)        
+        label(for='lat') Lat
+        input(type='number', id='lat', name='location[coordinates][1]' value=(shop.location && shop.location.coordinates[1]) required)
+        div
+            label(for='email', required) Email
+            input(type='email', name='email' value=shop.email)
+            label(for='phone') Phone
+            input(type='number', name='phone' value=shop.phone)
+        label(for='photo') Shop	 Image
+            input(type='file', name='photo', id='photo', accept='image/gif, image/png, image/jpeg')
+            if shop.photo
+                img(src=`/uploads/${shop.photo}`, alt=shop.shopname, width='200')
+        label(for='shopdescription') Description
+        textarea#shop-description(name='shopdescription')= shop.shopdescription 
+        label Shop Type
+        //- below is how we loop in pug using each...in properties
+        - const choices = ['Mobile', 'PC', 'Others']
+        - const shoptype = shop.shoptype || ''
+        ul
+            each choice in choices
+                li
+                    input(type="radio" id=choice value=choice name="shoptype" checked=(shoptype.includes(choice)))
+                    label(for=choice) #{choice}
+        button(type='submit') Add

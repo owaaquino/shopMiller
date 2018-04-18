@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    #login-form.wrapper_desktop
+        h1.title-header Login
+        form(action='/login', method='POST')
+            label(for='email') User Name/Email
+            input(type='text', name='email')
+            label(for='password') Password
+            input(type='password', name='password')
+            input(type='submit', value='Login')
+            p
+                | New User? 
+                a(href='/register') Register Here
+            p
+                a(href='/forgotPassword') Forgot my password

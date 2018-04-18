@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    #single-shop.wrapper_desktop
+        .shop-banner
+            h1.title-header #{shop.shopname}
+        #single-shop-main-content
+            .shop-description-left
+                p
+                    | #{shop.shopdescription}
+                .rating
+                    p
+                        | Rating 
+                        span.stars *****
+            .shop-description-right
+                #shop-category
+                    h3 Shop Type
+                    p #{shop.shoptype}
+                #shop-info
+                    ul
+                        li
+                            i.fa.fa-envelope(aria-hidden='true', style='margin-right: 5px')
+                            a(href='') #{shop.email}
+                        li
+                            i.fa.fa-phone(aria-hidden='true', style='margin-right: 5px')
+                            | #{shop.phone}
+                        li
+                            i.fa.fa-location-arrow(aria-hidden='true', style='margin-right: 5px')
+                        | #{shop.location.address}
+        #shop-comments
+            form(action='')
+                label(for='comment') Comment
+                textarea#comment(name='comment')
+                input(type='submit', name='submit', value='Add')
+            div
+                ul
+                    li.user-comment
+                        h3 John Doe
+                        p
+                            span#stars *****
+                        p
+                            | Objectively whiteboard principle-centered e-services after equity invested information. Globally embrace functional human capital rather than proactive materials.
+                    li.user-comment
+                        h3 Juan dela Cruz
+                        p
+                            span#stars *****
+                        p
+                            | Objectively whiteboard principle-centered e-services after equity invested information. Globally embrace functional human capital rather than proactive materials.

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    #register-form.wrapper_desktop
+        h1.title-header Register
+        form(action='/register', method='POST')
+            label(for='name') Name
+            input(type='text', name='name')
+            label(for='email') Email
+            input(type='email', name='email')
+            label(for='password') Password
+            input(type='password', name='password')
+            label(for='password-confirm') Confirm Password
+            input(type='password', name='password-confirm')
+            input(type='submit', value='Register')

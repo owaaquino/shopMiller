@@ -1,0 +1,9 @@
+extends layout
+
+include mixins/_shopForm
+
+block content
+	#add-new-shop
+		//- pre= h.dump(shop)
+		h1.title-header= title
+		+shopForm(shop) 

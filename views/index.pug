@@ -1,0 +1,63 @@
+extends layout
+
+include mixins/_shopCard
+block content
+  #search_shop
+    input(class='search', type='text', name='search_box', placeholder='Enter Shop Name...')
+    input(type='submit', name='search_button', value='Look')
+  #shop_section.breather_mobile.wrapper_desktop
+    h1 Top Shop
+    //- p= h.dump(shops)
+    #shop_cards
+      each shop in shops
+        +shopCard(shop)
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description
+      //- .shop_card
+      //-   img(src='img/sample/card_sample_img.jpg', alt='')
+      //-   .card_desc
+      //-   h2 Shop Name
+      //-   p Short description

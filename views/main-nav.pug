@@ -1,0 +1,21 @@
+nav#main_nav
+  li.nav_selected
+    a(href='/') Home
+  li
+    a(href='/shop') Shop
+  li
+    a(href='/new-shop') New Shop
+  li
+    a(href='/about') About
+  li
+    a(href='/contact') Contact
+  li
+    ul
+    if user
+      li
+        a(href='/logout') Logout
+      li
+        a(href='/account') My Account
+    else
+      li
+        a(href='/login') Login

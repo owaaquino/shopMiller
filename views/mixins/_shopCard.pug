@@ -1,0 +1,8 @@
+mixin shopCard(shop = {})
+    .shop_card
+        img(src=`uploads/${shop.photo || 'card_sample_img.jpg'}`, alt='')
+        .card_desc
+        h2
+            a(href=`/shop/${shop.slug}`) #{shop.shopname}
+        p= shop.shopdescription
+        a(href=`/shop/${shop._id}/edit`) Edit
